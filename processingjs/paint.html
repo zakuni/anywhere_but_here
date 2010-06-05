@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=Shift_JIS">
+<!-- http://processingjs.org/learning/topic/bouncybubbles -->
+
+
+<title>iProcessing.js</title>
+<meta name="viewport" content="width=320; initial-scale=1.0; 
+maximum-scale=1.0; user-scalable=0;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<script src="iprocessing/iprocessing.js"></script>
+<script src="iprocessing/init.js"></script>
+<style type="text/css">
+body {
+	margin: 0;
+}
+</style>
+<style type="text/css">
+		#FLASH_MESSAGE{
+			position : fixed;
+			font-size : 500%;
+			z-index : 10000;
+
+			padding : 50px;
+			left : 50%;
+			top : 50%;
+			margin : -1em;
+
+			background-color : #444;
+			color : #FFF;
+			-moz-border-radius: 0.3em;
+			border-radius: 0.3em;
+			min-width : 1em;
+			text-align : center;
+		}
+	</style><style type="text/css">#gm_minibuffer_container{right: 0px;left: 0px;bottom: 0px;line-height: 100%;vertical-align: baseline;border: 1px dotted #444;font-family: sans-serif;text-decoration: none;font-weight: normal;font-style: normal;font-size: medium;font-stretch: normal;font-variant: normal;font-size-adjust: none;letter-spacing: normal;background: none;text-align: left;position: fixed;margin: 0;padding: 20px;background-image: none;color: #aaa;-moz-border-radius: 10px 10px 0px 0px;border-radius: 10px 10px 0px 0px;opacity:0.8;z-index:999;}
+#gm_minibuffer_container > spangm_minibuffer_input_area{color: #CB6161;display:inline;}#gm_minibuffer_container > span {background:inherit; background-image:inherit; background-color:inherit; color:inherit; text-align:inherit; font-size:inherit; font-style:inherit; font-weight:inherit; margin:inherit; opacity:inherit; text-decoration:inherit; border:0px; height:100%; padding:0; margin:inherit; font-family:inherit; vertical-align:inherit; line-height:inherit; font-stretch:inherit; font-variant:inherit; font-size-adjust:inherit; letter-spacing:inherit;color: #ccc;display:inline;margin-right: 5px;}
+#gm_minibuffer_input_area{background:inherit; background-image:inherit; background-color:inherit; color:inherit; text-align:inherit; font-size:inherit; font-style:inherit; font-weight:inherit; margin:inherit; opacity:inherit; text-decoration:inherit; border:0px; height:100%; padding:0; margin:inherit; font-family:inherit; vertical-align:inherit; line-height:inherit; font-stretch:inherit; font-variant:inherit; font-size-adjust:inherit; letter-spacing:inherit;width:90%;}#gm_minibuffer_completion{background:inherit; background-image:inherit; background-color:inherit; color:inherit; text-align:inherit; font-size:inherit; font-style:inherit; font-weight:inherit; margin:inherit; opacity:inherit; text-decoration:inherit; border:0px; height:100%; padding:0; margin:inherit; font-family:inherit; vertical-align:inherit; line-height:inherit; font-stretch:inherit; font-variant:inherit; font-size-adjust:inherit; letter-spacing:inherit;margin-bottom: 20px;border-bottom: 1px dotted #444;}
+#gm_minibuffer_completion > span {background:inherit; background-image:inherit; background-color:inherit; color:inherit; text-align:inherit; font-size:inherit; font-style:inherit; font-weight:inherit; margin:inherit; opacity:inherit; text-decoration:inherit; border:0px; height:100%; padding:0; margin:inherit; font-family:inherit; vertical-align:inherit; line-height:inherit; font-stretch:inherit; font-variant:inherit; font-size-adjust:inherit; letter-spacing:inherit;color: #ccc;margin: 10px;display:block;}
+#gm_minibuffer_completion > li {background:inherit; background-image:inherit; background-color:inherit; color:inherit; text-align:inherit; font-size:inherit; font-style:inherit; font-weight:inherit; margin:inherit; opacity:inherit; text-decoration:inherit; border:0px; height:100%; padding:0; margin:inherit; font-family:inherit; vertical-align:inherit; line-height:inherit; font-stretch:inherit; font-variant:inherit; font-size-adjust:inherit; letter-spacing:inherit;color: #ccc;padding: 2px;margin-bottom:10px;margin-left: 10px;}
+#gm_minibuffer_completion > li.gm_minibuffer_selected{background:inherit; background-image:inherit; background-color:inherit; color:inherit; text-align:inherit; font-size:inherit; font-style:inherit; font-weight:inherit; margin:inherit; opacity:inherit; text-decoration:inherit; border:0px; height:100%; padding:0; margin:inherit; font-family:inherit; vertical-align:inherit; line-height:inherit; font-stretch:inherit; font-variant:inherit; font-size-adjust:inherit; letter-spacing:inherit;color: #CB6161;padding: 2px;margin-bottom:10px;margin-left: 10px;}
+</style><style type="text/css">div#gm_minibuffer_command{right: 10px;left: 10px;top: 10px;line-height: 100%;vertical-align: baseline;border: 1px dotted #444;font-family: sans-serif;text-decoration: none;font-weight: normal;font-style: normal;font-size: medium;font-stretch: normal;font-variant: normal;font-size-adjust: none;letter-spacing: normal;background: none;text-align: left;position: fixed;margin: 0;padding: 20px;background-color: #000;background-image: none;color: #aaa;-moz-border-radius: 10px;border-radius: 10px;opacity:0.8;z-index:1000;}
+div#gm_minibuffer_command div{background:inherit; background-image:inherit; background-color:inherit; color:inherit; text-align:inherit; font-size:inherit; font-style:inherit; font-weight:inherit; margin:inherit; opacity:inherit; text-decoration:inherit; border:0px; height:100%; padding:0; margin:inherit; font-family:inherit; vertical-align:inherit; line-height:inherit; font-stretch:inherit; font-variant:inherit; font-size-adjust:inherit; letter-spacing:inherit;opacity:1.0;text-align:center;}div#gm_minibuffer_command > div{background:inherit; background-image:inherit; background-color:inherit; color:inherit; text-align:inherit; font-size:inherit; font-style:inherit; font-weight:inherit; margin:inherit; opacity:inherit; text-decoration:inherit; border:0px; height:100%; padding:0; margin:inherit; font-family:inherit; vertical-align:inherit; line-height:inherit; font-stretch:inherit; font-variant:inherit; font-size-adjust:inherit; letter-spacing:inherit;margin: 0px 20px 20px 0px;opacity:1.0;text-align:center;}div#gm_minibuffer_command kbd{background:inherit; background-image:inherit; background-color:inherit; color:inherit; text-align:inherit; font-size:inherit; font-style:inherit; font-weight:inherit; margin:inherit; opacity:inherit; text-decoration:inherit; border:0px; height:100%; padding:0; margin:inherit; font-family:inherit; vertical-align:inherit; line-height:inherit; font-stretch:inherit; font-variant:inherit; font-size-adjust:inherit; letter-spacing:inherit;font-size: 120%;font-weight: bold;color: #B83E3B;text-align: right;width:50%;float:left;}
+div#gm_minibuffer_command kbd + div{margin-left:50%;text-align:left;}
+div#gm_minibuffer_command kbd + div:before{content:": ";}
+div#gm_minibuffer_command h1{background:inherit; background-image:inherit; background-color:inherit; color:inherit; text-align:inherit; font-size:inherit; font-style:inherit; font-weight:inherit; margin:inherit; opacity:inherit; text-decoration:inherit; border:0px; height:100%; padding:0; margin:inherit; font-family:inherit; vertical-align:inherit; line-height:inherit; font-stretch:inherit; font-variant:inherit; font-size-adjust:inherit; letter-spacing:inherit;margin: 20px auto;background-image: none;opacity:1.0;font-weight: bold;font-size: 150%;color:#fff;padding-left: 20px;text-align: center;}
+</style></head><body data-feedly-processed="yes">
+<div>
+<script type="application/processing">
+
+void setup() {  
+    size(320, 360);  
+    background(102);  
+}  
+
+void draw() {  
+    stroke(255);  
+    if(mousePressed) {  
+	line(mouseX, mouseY, pmouseX, pmouseY);  
+    }  
+}  
+
+
+</script>
+<canvas width="320" height="360"></canvas></div>
+<div style="height: 0px; width: 0px; overflow: hidden;"></div>
+<div style="display: none;" id="FLASH_MESSAGE"></div></body></html>
