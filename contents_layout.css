@@ -1,0 +1,34 @@
+body {
+    background-color:#f8f8f8;
+    margin:0;
+    padding:0;
+}
+
+#wrapper{
+    margin:20;
+    padding:20;
+    background-color:#ffffff;
+}
+
+#header{
+    margin:0;
+    padding:0;
+    background-color:#eee8aa;
+    text-align:center;
+}
+
+#contents{
+    margin:0;
+    padding:0;
+}
+
+#footer{
+    margin:0;
+    padding:0;
+    background-color:#eee8aa;
+}
+
+p{
+    margin:0;
+    padding:10px;
+}
