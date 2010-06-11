@@ -5,21 +5,18 @@ body {
 }
 
 #wrapper{
-    margin:20;
-    padding:20;
     background-color:#ffffff;
 }
 
 #header{
-    margin:0;
-    padding:0;
-    background-color:#eee8aa;
+    padding-top:8;
+    background-color:#f8f8f8;
     text-align:center;
 }
 
 #contents{
-    margin:0;
-    padding:0;
+    padding:10;
+    background-color:#dddddd;
 }
 
 #footer{
@@ -29,6 +26,7 @@ body {
 }
 
 p{
+    border:solid;
     margin:0;
     padding:10px;
 }
