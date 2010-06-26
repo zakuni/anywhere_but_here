@@ -2,6 +2,8 @@
 <html>
   <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
   <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <script type="text/javascript" src="template.js" charset=UTF-8></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
   <head>
     <style type="text/css">
       <!-- 
@@ -11,25 +13,50 @@
 	-->
     </style>
     <title>遠くへいきたい</title>
+    <link rel="stylesheet" type="text/css" href="contents_layout.css">
+
   </head>
   
   
   <body bgcolor="#f5f5f5" link="#ffffff" vlink="#ffffff">
-
+<!-- St-HP-H -->
+ 
+<!-- En-HP-H -->
     
-    <script language="JavaScript">
-      <!-- 
-	   colors=new Array();
-	   colors[0]="#ffffff";
-	   colors[1]="#ffffff";
-	   index=Math.floor(2*Math.random());
-	   document.bgColor=colors[index];
-	-->
-    </script>
+    <!--アクセス解析タグ　ここから-->
+    
+    <!-- [FC2 Analyzer] http://analysis.fc2.com/  -->
+    <script language="javascript" src="http://analyzer5.fc2.com/ana/processor.php?uid=1031942" type="text/javascript"></script>
+    <noscript><div align="right"><img src="http://analyzer5.fc2.com/ana/icon.php?uid=1031942&ref=&href=&wid=0&hei=0&col=0" /></div></noscript>
+    <!-- [FC2 Analyzer]  -->
+    
+    
+    <script type="text/javascript" src="http://1881308.ranking2.fc2.com/analyze.js" charset="utf-8"></script>
+    <!--アクセス解析タグ　ここまで-->
+
+
+
+  <script type="text/javascript">
+    <!--
+	
+	var colors = new Array("#ebd763", "#64cec7", "#f0886a", "#57c062", "#8e57c0")
+	var rcolor = colors[Math.floor(Math.random()*colors.length)]
+	
+	function changeCSS(){
+	$("p").css("color", rcolor);
+	$("table.index td.index").css("background-color", rcolor);
+	$("table.index td.index").css("border-right-color", rcolor);
+	}
+      $(document).ready(function(){
+      changeCSS();
+      });
+    -->
+  </script>
+
     <div align="center">
       <br>
-      <table border="0" bgcolor="#ffffff" width="640px"  align="center">
-	<tr bgcolor="#66c2c2"><td align="center" style="border-style:outset; border-right-width:10px; border-right-color:#66c2c2; border-top-width:5px; border-top-color:#cccccc; border-bottom-width:0px; border-left-width:2px; border-left-color:#cccccc;">
+      <table class='index' border="0" bgcolor="#ffffff" width="640px"  align="center">
+	<tr class='index' bgcolor="#66c2c2"><td class='index' align="center" style="border-style:outset; border-right-width:10px; border-right-color:#aaaaaa; border-top-width:5px; border-top-color:#cccccc; border-bottom-width:0px; border-left-width:2px; border-left-color:#cccccc;">
 	    <br>
 	    <font size="4" color="#990000"><b>Anywhere But Here<br>
 		by The Ward</b></font><br>
@@ -92,6 +119,7 @@
       <br>
     </div>
     <br>
+
 </body>
 
   
