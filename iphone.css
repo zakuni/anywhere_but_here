@@ -8,11 +8,15 @@ a img {
     border-style:none;
 }
 
+a {text-decoration: none;}
+a:active{color: #000000}
+a:hover{color: #333333}
+
 table.contents{
     margin-left:auto;
     margin-right:auto;
     border:0;
-    width:500px;
+    width:100%;
 }
 .outline{
     background-color:#000000;
@@ -26,14 +30,14 @@ table.contents{
 
 .index{
     background-color:#dddddd;
-    width:640px;
-    margin-left:auto;
-    margin-right:auto;
+    width:100%;
 }
 
 tr.index{}
 td.index{
     background-color:#64cec7;
+}
+td.menu{
 }
 
 #wrapper{
@@ -61,7 +65,27 @@ td.index{
     background-color:#eee8aa;
 }
 
-p{
-    font-size:16px;
-    font-color:#000000;
+p.title{
+    font-size:80px;
+}
+.etitle{
+	font-size:40px;
+	color:#990000;
+	font-weight:bold;
+	margin:10;
+}
+.menu{
+    font-size:65px;
+    color:#ffffff;
+}	
+.zakuni{
+	font-size:60px;
+}
+.since{
+	font-size:40px;
+}
+.recent{
+	font-size:40px;
+	color:#ffffff;
+	margin:0;
 }

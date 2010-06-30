@@ -5,23 +5,15 @@
   <script type="text/javascript" src="template.js" charset=UTF-8></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
   <head>
-    <style type="text/css">
-      <!-- 
-	   a{text-decoration: none;}
-	   a:active{color: #000000}
-	   a:hover{color: #333333}
-	-->
-    </style>
+    <link media="only screen and (max-device-width:480px)" href="iphone.css" type="text/css" rel="stylesheet"/>
+    <link media="screen and (min-device-width:481px)" href="index.css" type="text/css" rel="stylesheet"/>
+
     <title>遠くへいきたい</title>
-    <link rel="stylesheet" type="text/css" href="contents_layout.css">
 
   </head>
   
   
   <body bgcolor="#f5f5f5" link="#ffffff" vlink="#ffffff">
-<!-- St-HP-H -->
- 
-<!-- En-HP-H -->
     
     <!--アクセス解析タグ　ここから-->
     
@@ -38,15 +30,6 @@
 
   <script type="text/javascript">
     <!--
-	
-	var colors = new Array("#ebd763", "#64cec7", "#f0886a", "#57c062", "#8e57c0")
-	var rcolor = colors[Math.floor(Math.random()*colors.length)]
-	
-	function changeCSS(){
-	$("p").css("color", rcolor);
-	$("table.index td.index").css("background-color", rcolor);
-	$("table.index td.index").css("border-right-color", rcolor);
-	}
       $(document).ready(function(){
       changeCSS();
       });
@@ -54,72 +37,61 @@
   </script>
 
     <div align="center">
-      <br>
-      <table class='index' border="0" bgcolor="#ffffff" width="640px"  align="center">
-	<tr class='index' bgcolor="#66c2c2"><td class='index' align="center" style="border-style:outset; border-right-width:10px; border-right-color:#aaaaaa; border-top-width:5px; border-top-color:#cccccc; border-bottom-width:0px; border-left-width:2px; border-left-color:#cccccc;">
-	    <br>
-	    <font size="4" color="#990000"><b>Anywhere But Here<br>
-		by The Ward</b></font><br>
+      <table class='index' border="0" bgcolor="#ffffff">
+	<tr class='index' bgcolor="#66c2c2"><td class='index' align="center">
+	    <p class='etitle'>Anywhere But Here<br>
+		by The Ward</p>
 	    <br>
 	    <br>
-	    <br>
-	    <br>
-	    <br>
-	    <font size="6">遠くへいきたい</font><br>
-	    <br>
-	    <font size="5">ザ区</font><br>
-	    <br>
-	    since 1.29 2005
-	    <br>
+	    <p class='title'>遠くへいきたい</p>
+	    <p class='zakuni'>ザ区</p>
+	    <p class='since'>since 1.29 2005</p>
 	    <br>
 	  </td>
 	</tr>
 	<tr bgcolor="#d63333" align="center">
-	  <td style="border-style:outset; border-right-width:10px; border-right-color:#d63333; border-left-width:2px; border-left-color:#cccccc; border-top-width:0px; border-bottom-width:3px; border-bottom-color:#cccccc;">
+	  <td class='menu'>
 	    <div align="left">
-	      <font color="#ffffff" size="2">最近の更新</font>
+	      <p class='recent'>最近の更新</p>
 	      <table>
 		<tr>
 		  <th valign="top">
-		    <font color="#ffffff" size="2">
+		    <p class='recent'>
 		      10.06.19<br>
 		      10.06.07<br>
 		      08.10.12
-		    </font>
 		  </th>
 		  <td>
-		    <font color="#ffffff" size="2">
+		      <p class='recent'>
 		      なんか 更新<br>
 		      なんか 追加<br>
 		      Flash写真館 追加
-		      <font size="1">
-			<a href="history.html">（過去の更新履歴へ）</a>
-		      </font>
-		    </font>
+		      <a href="history.html">（過去の更新履歴へ）</a></p>
 		  </td>
 		</tr>
 	      </table>
 	    </div>
-	    <br>
-	    <br>
-	    <font size="5">
+	    <p class='menu'>
 	      <a href="profile.html">プロフィール</a>
 	      <a href="photo.html">　写真　</a>
 	      <a href="http://jbbs.livedoor.jp/movie/5730/">掲示板</a>
 	      <a href="words.html">　文書　</a>
 	      <a href="something.html">なんか</a>
 	      <a href="mailto:kunio038&#64;gmail.com">　メール</a>
-	    </font>
-	    <br>
-	    <br>
+	    </p>
 	    <br>
 	  </td>
 	</tr>
       </table>
       <br>
+
+												<!-- FC2カウンター ここから -->
+												<script language="JavaScript" type="text/javascript" src="http://counter1.fc2.com/counter.php?id=10217204"></script><noscript><img src="http://counter1.fc2.com/counter_img.php?id=10217204"></noscript>
+												<!-- FC2カウンター ここまで -->
+									
+
     </div>
     <br>
-
 </body>
 
   
