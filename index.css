@@ -1,3 +1,4 @@
+@charset "Shift_JIS";
 body {
     background-color:#f8f8f8;
     padding:0;
@@ -6,6 +7,8 @@ body {
 
 a img {
     border-style:none;
+    vertical-align:bottom;
+    margin-right:5;
 }
 
 a {text-decoration: none;}
@@ -38,11 +41,28 @@ table.contents{
 
 tr.index{}
 td.index{
-    background-color:#64cec7;
-border-style:outset; border-right-width:10px; border-right-color:#aaaaaa; border-top-width:5px; border-top-color:#cccccc; border-bottom-width:0px; border-left-width:2px; border-left-color:#cccccc;
+    background-color:#ffffff;
+    border-style:outset;
+    border-right-width:10px;
+    border-right-color:#aaaaaa;
+    border-top-width:5px;
+    border-top-color:#cccccc;
+    border-bottom-width:0px;
+    border-left-width:2px;
+    border-left-color:#cccccc;
+    text-align:center;
 }
 td.menu{
-border-style:outset; border-right-width:10px; border-right-color:#d63333; border-left-width:2px; border-left-color:#cccccc; border-top-width:0px; border-bottom-width:3px; border-bottom-color:#cccccc;
+    background-color:#d63333;
+    border-style:outset;
+    border-right-width:10px;
+    border-right-color:#d63333;
+    border-left-width:2px;
+    border-left-color:#cccccc;
+    border-top-width:0px;
+    border-bottom-width:3px;
+    border-bottom-color:#cccccc;
+    text-align:center;
 }
 
 #wrapper{
@@ -82,7 +102,7 @@ p.title{
 	margin:20;
 }
 .menu{
-    font-size:24px;
+    font-size:15px;
     color:#ffffff;
 }
 .zakuni{
@@ -95,4 +115,40 @@ p.title{
 	font-size:13px;
 	color:#ffffff;
 	margin:0;
+}
+
+.iphone{
+    display:none;
+}
+
+#profile{
+    width:96px; 
+    float:left;
+    margin-left:25px;
+    height:100px;
+}
+
+#photos{
+    width:96px;
+    float:left;
+}
+
+#talk{
+    width:96px;
+    float:left;
+}
+
+#text{
+    width:96px;
+    float:left;
+}
+
+#something{
+    width:96px;
+    float:left;
+}
+
+#mail{
+    width:96px;
+    float:left;
 }

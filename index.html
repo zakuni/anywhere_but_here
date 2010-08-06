@@ -2,18 +2,45 @@
 <html>
   <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
   <meta http-equiv="Content-Script-Type" content="text/javascript">
-  <script type="text/javascript" src="template.js" charset=UTF-8></script>
+  <script type="text/javascript" src="template.js" charset="UTF-8"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
   <head>
-    <link media="only screen and (max-device-width:480px)" href="iphone.css" type="text/css" rel="stylesheet"/>
-    <link media="screen and (min-device-width:481px)" href="index.css" type="text/css" rel="stylesheet"/>
+    <link media="only screen and (max-device-width:480px)" href="iphone.css" type="text/css" rel="stylesheet" charset="Shift_JIS"/>
+    <link media="screen and (min-device-width:481px)" href="index.css" type="text/css" rel="stylesheet" charset="Shift_JIS"/>
+    <!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="explorer.css" media="all" />
+	<![endif]-->
+    <meta name="viewport" content="width=device-width, 
+				   initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
 
     <title>遠くへいきたい</title>
 
   </head>
   
   
-  <body bgcolor="#f5f5f5" link="#ffffff" vlink="#ffffff">
+  <body link="#ffffff" vlink="#ffffff">
+
+  <script type="text/javascript">
+    <!--
+
+      window.onload = function(){
+      if(navigator.userAgent.indexOf('Mobile') > -1){
+      setTimeout("onloadScroll()",10);
+      }
+      else{
+      setTimeout("onloadScroll()",10);
+      }
+      }
+      function onloadScroll(){
+      window.scrollTo(0,70);
+      }
+
+      $(document).ready(function(){
+      changeCSS();
+      });
+
+      -->
+  </script>
     
     <!--アクセス解析タグ　ここから-->
     
@@ -25,59 +52,74 @@
     
     <script type="text/javascript" src="http://1881308.ranking2.fc2.com/analyze.js" charset="utf-8"></script>
     <!--アクセス解析タグ　ここまで-->
+    
 
 
 
-  <script type="text/javascript">
-    <!--
-      $(document).ready(function(){
-      changeCSS();
-      });
-    -->
-  </script>
 
     <div align="center">
-      <table class='index' border="0" bgcolor="#ffffff">
-	<tr class='index' bgcolor="#66c2c2"><td class='index' align="center">
+      <table class='index'>
+	<tr class='index'>
+	  <td class='index'>
 	    <p class='etitle'>Anywhere But Here<br>
-		by The Ward</p>
+	      by The Ward</p>
 	    <br>
 	    <br>
 	    <p class='title'>遠くへいきたい</p>
 	    <p class='zakuni'>ザ区</p>
-	    <p class='since'>since 1.29 2005</p>
-	    <br>
+	    <span class="iphone"><br></span>
+	    <script type="text/javascript">
+	      since();
+	    </script>
 	  </td>
 	</tr>
-	<tr bgcolor="#d63333" align="center">
+	<tr>
 	  <td class='menu'>
-	    <div align="left">
-	      <p class='recent'>最近の更新</p>
-	      <table>
-		<tr>
-		  <th valign="top">
-		    <p class='recent'>
-		      10.06.19<br>
-		      10.06.07<br>
-		      08.10.12
-		  </th>
-		  <td>
+	    <!-- 最近の更新(PCのみ) -->
+	    <div class="pc">
+	      <div align='left'>
+		<p class='recent'>最近の更新</p>
+		<table>
+		  <tr>
+		    <th valign='top'>
 		      <p class='recent'>
-		      なんか 更新<br>
-		      なんか 追加<br>
-		      Flash写真館 追加
-		      <a href="history.html">（過去の更新履歴へ）</a></p>
-		  </td>
-		</tr>
-	      </table>
+			10.06.19<br>
+			10.06.07<br>
+			08.10.12
+		    </th>
+		    <td>
+		      <p class='recent'>
+			なんか 更新<br>
+			なんか 追加<br>
+			Flash写真館 追加
+			<a href='history.html'>（過去の更新履歴へ）</a></p>
+		    </td>
+		  </tr>
+		</table>
+	      </div>
 	    </div>
+	    <!-- 最近の更新ここまで -->
 	    <p class='menu'>
-	      <a href="profile.html">プロフィール</a>
-	      <a href="photo.html">　写真　</a>
-	      <a href="http://jbbs.livedoor.jp/movie/5730/">掲示板</a>
-	      <a href="words.html">　文書　</a>
-	      <a href="something.html">なんか</a>
-	      <a href="mailto:kunio038&#64;gmail.com">　メール</a>
+	      <div id="profile">
+		<a href="profile.html"><img src="ID.png" height="50" alt="プロフィール"><span class="pc"><br>プロフィール</span></a>
+	      </div>
+
+	      <div id="photos">
+		<a href="photo.html"><img src="Photos.png" height="50" alt="写真"><span class="pc"><br>写真</span></a>
+	      </div>
+
+		<span class="pc"><div id="talk"><a href="http://jbbs.livedoor.jp/movie/5730/"><img src="Talk.png" alt="掲示板"><br>掲示板</a></div></span>
+	      <div id="text">
+		<a href="words.html"><img src="Text.png" height="50" alt="文書"><span class="pc"><br>文書</span></a>
+	      </div>
+
+	      <div id="something">
+		<a href="something.html"><img src="Something.png" height="50" alt="なんか"><span class="pc"><br>なんか</span></a>
+	      </div>
+
+	      <div id="mail">
+		<a href="mailto:kunio038&#64;gmail.com"><img src="Mail.png" height="50" alt="メール"><span class="pc"><br>メール</span></a>
+	      </div>
 	    </p>
 	    <br>
 	  </td>
@@ -85,10 +127,10 @@
       </table>
       <br>
 
-												<!-- FC2カウンター ここから -->
-												<script language="JavaScript" type="text/javascript" src="http://counter1.fc2.com/counter.php?id=10217204"></script><noscript><img src="http://counter1.fc2.com/counter_img.php?id=10217204"></noscript>
-												<!-- FC2カウンター ここまで -->
-									
+      <!-- FC2カウンター ここから -->
+      <script language="JavaScript" type="text/javascript" src="http://counter1.fc2.com/counter.php?id=10217204"></script><noscript><img src="http://counter1.fc2.com/counter_img.php?id=10217204"></noscript>
+      <!-- FC2カウンター ここまで -->
+      
 
     </div>
     <br>
